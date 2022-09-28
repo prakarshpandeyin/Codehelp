@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.7.1/ace.js"
+    integrity="sha512-FKkEO4RZEQjFmU1hoUYdx6HJLdpHpNzgWspgnQCxx7OOkDVz4kiGJxR97yWc5bzjwcCpJC/CRCiQzuoGYAChhQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  
+  <title>Coding API</title>
+</head>
+<style>
+  #editor {
+  width: calc(100% - 20px);
+  height: 50vh;
+  margin: 10px;
+  }
+  *{
+    margin:0;
+  }
+</style>
+
+<body>
+
+  <select id="languageSelector">
+          <option value="8">Java</option>
+          <option value="4">Javascript</option>
+          <option value="7">C</option>
+          <option value="0">Python</option>
+          <option value="77">CPP</option>
+  </select>
+
+  <div id="editor">
+
+  </div>
+  <script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/javascript");
+  </script>
+
+
+  <div class="outputportion" style="background-color: black ; height:
+      200px;">
+    <h3 id="outputconsole" style="color: white;"> OUTPUT</h3>
+   
+
+  </div>
+
+  <button id="btncompile" style="background-color: #DE6844 ; padding:10px 30px ; margin:10px;color: white;"> compile</button>
+<script src="script.js"></script>
+  
+</body>
+
+
+</html>
